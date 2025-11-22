@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>PLANTA SANITARY – Micro-Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 16px; }
+    .container { max-width: 480px; margin: 0 auto; }
+    h1 { font-size: 1.6rem; margin-bottom: 0.2rem; }
+    h2 { font-size: 1rem; font-weight: normal; margin-top: 0; color: #555; }
+    .buttons { display: flex; gap: 8px; margin: 16px 0; }
+    button { flex: 1; padding: 12px; font-size: 1rem; border-radius: 8px; border: 1px solid #ddd; }
+    section { margin-top: 16px; border-top: 1px solid #eee; padding-top: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>PLANTA SANITARY</h1>
+    <h2>Reinigen in 3 Schritten</h2>
+
+    <div class="buttons">
+      <button onclick="showSection('anwenden')">Anwenden</button>
+      <button onclick="showSection('dosieren')">Dosieren</button>
+      <button onclick="showSection('fehler')">Fehler lösen</button>
+    </div>
+
+    <section id="anwenden">
+      <h3>Anwenden</h3>
+      <p>Kurzes Video, 3 Schritte, Icons …</p>
+    </section>
+
+    <section id="dosieren" style="display:none">
+      <h3>Dosieren</h3>
+      <p>Dosierlinien, Eimer / Sprühflasche / Maschine …</p>
+    </section>
+
+    <section id="fehler" style="display:none">
+      <h3>Fehler lösen</h3>
+      <p>Schlieren? Kalk? Material? → Kurz & konkret.</p>
+    </section>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
